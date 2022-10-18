@@ -6,8 +6,8 @@ const { Navigator, Screen } = createNativeStackNavigator()
 
 export const HomeStack = () => {
     return (
-        <Navigator>
-            <Screen name='HomeScreen' component={HomeScreen}/>
+        <Navigator screenOptions={{ headerShown: false }}>
+            <Screen name='HomeScreen' component={HomeScreen} />
         </Navigator>
     )
 }
