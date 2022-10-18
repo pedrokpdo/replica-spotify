@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View } from "react-native";
+import { Image, TouchableOpacity, View } from "react-native";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 //@ts-ignore
 import lual from '../../assets/lual.png'
@@ -9,8 +9,10 @@ import { Row } from "../../components/funcionais/RowComponent";
 import { AntDesign, Entypo, FontAwesome, MaterialCommunityIcons, SimpleLineIcons } from "@expo/vector-icons";
 import { Title } from "../../components/funcionais/TitleComponent";
 import { MusicComponent } from "../../components/MusicComponent";
+import { useNavigation } from "@react-navigation/native";
 
 export const MusicListScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent back>
             <Space>
@@ -37,18 +39,18 @@ export const MusicListScreen = () => {
                 </Row>
             </Space>
             <Space>
-                <View style={{ marginTop: 16 }}>
+                <TouchableOpacity onPress={() => {navigation.navigate('MusicScreen')}} style={{ marginTop: 16 }}>
                     <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
-                </View>
-                <View style={{ marginTop: 16 }}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => {navigation.navigate('MusicScreen')}} style={{ marginTop: 16 }}>
                     <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
-                </View>
-                <View style={{ marginTop: 16 }}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => {navigation.navigate('MusicScreen')}} style={{ marginTop: 16 }}>
                     <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
-                </View>
-                <View style={{ marginTop: 16 }}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => {navigation.navigate('MusicScreen')}} style={{ marginTop: 16 }}>
                     <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
-                </View>
+                </TouchableOpacity>
             </Space>
 
         </ContainerComponent>
