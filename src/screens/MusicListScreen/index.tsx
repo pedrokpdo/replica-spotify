@@ -8,6 +8,7 @@ import { Text } from "../../components/funcionais/TextComponent";
 import { Row } from "../../components/funcionais/RowComponent";
 import { AntDesign, Entypo, FontAwesome, MaterialCommunityIcons, SimpleLineIcons } from "@expo/vector-icons";
 import { Title } from "../../components/funcionais/TitleComponent";
+import { MusicComponent } from "../../components/MusicComponent";
 
 export const MusicListScreen = () => {
     return (
@@ -34,6 +35,20 @@ export const MusicListScreen = () => {
                         </View>
                     </Row>
                 </Row>
+            </Space>
+            <Space>
+                <View style={{ marginTop: 16 }}>
+                    <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
+                </View>
+                <View style={{ marginTop: 16 }}>
+                    <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
+                </View>
+                <View style={{ marginTop: 16 }}>
+                    <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
+                </View>
+                <View style={{ marginTop: 16 }}>
+                    <MusicComponent photo={lual} title='Girasol (Acustico)' describe={'Cidade Negra'} />
+                </View>
             </Space>
 
         </ContainerComponent>
