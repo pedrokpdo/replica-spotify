@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Image, View } from 'react-native'
 import { CardComponent } from '../../components/CardComponent'
 import { CardMusicComponent } from '../../components/CardMusicComponent'
 import { ContainerComponent } from '../../components/funcionais/ContainerComponent'
@@ -18,6 +18,10 @@ import rave from '../../assets/rave.webp'
 import pagode from '../../assets/pagode.webp'
 //@ts-ignore
 import lual from '../../assets/lual.png'
+import { Title } from '../../components/funcionais/TitleComponent'
+import { SimpleLineIcons } from '@expo/vector-icons'
+import { FullCard } from '../../components/funcionais/FullCard'
+import { Text } from '../../components/funcionais/TextComponent'
 
 export const HomeScreen = () => {
     return (
@@ -54,6 +58,23 @@ export const HomeScreen = () => {
                         <CardMusicComponent title={'Sertanejo'} photo={sertanejo} />
                     </View>
                 </Row>
+            </Space>
+            <Space top={2}>
+                <Row style={{ alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Title style={{ fontSize: 24 }}>Escolhido para você</Title>
+                    <SimpleLineIcons name='options-vertical' size={24} color={'white'} />
+                </Row>
+                <FullCard style={{ padding: 8, backgroundColor: '#353535', borderRadius: 8, marginTop: 16 }}>
+                    <Row style={{ alignItems: 'center' }}>
+                        <Image source={rave} style={{ width: 100, height: 100 }} />
+                        <View style={{ width: 180, marginLeft: 16 }}>
+                            <Text>Episodeo . Thu</Text>
+                            <Title>Modus Operandi</Title>
+                            <Text>Episodio especial de duas horas sobre Jeffrey Dahmer</Text>
+                        </View>
+                    </Row>
+
+                </FullCard>
             </Space>
         </ContainerComponent>
     )
