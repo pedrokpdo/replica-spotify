@@ -22,6 +22,7 @@ import { Title } from '../../components/funcionais/TitleComponent'
 import { SimpleLineIcons } from '@expo/vector-icons'
 import { FullCard } from '../../components/funcionais/FullCard'
 import { Text } from '../../components/funcionais/TextComponent'
+import { ArtistComponent } from '../../components/ArtistComponent'
 
 export const HomeScreen = () => {
     return (
@@ -73,9 +74,26 @@ export const HomeScreen = () => {
                             <Text>Episodio especial de duas horas sobre Jeffrey Dahmer</Text>
                         </View>
                     </Row>
-
                 </FullCard>
             </Space>
+            <Space top={2}>
+                <Title style={{ fontSize: 24 }}>Seus mixes mais ouvidos</Title>
+                <Row top={2}>
+                    <View style={{ marginRight: 16 }}>
+                        <ArtistComponent photo={sertanejo} title='Marina Peralta, Ponto de equilibrio Mar...' />
+                    </View>
+                    <View style={{ marginRight: 16 }}>
+                        <ArtistComponent photo={rock} title='Marina Peralta, Ponto de equilibrio Mar...' />
+                    </View>
+                    <View style={{ marginRight: 16 }}>
+                        <ArtistComponent photo={rave} title='Marina Peralta, Ponto de equilibrio Mar...' />
+                    </View>
+                    <View style={{ marginRight: 16 }}>
+                        <ArtistComponent photo={sertanejo} title='Marina Peralta, Ponto de equilibrio Mar...' />
+                    </View>
+                </Row>
+            </Space>
+            <View style={{ height: 100 }}></View>
         </ContainerComponent>
     )
 }
