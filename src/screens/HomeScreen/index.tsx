@@ -1,12 +1,15 @@
 import React from 'react'
-import { View } from 'react-native'
 import { ContainerComponent } from '../../components/funcionais/ContainerComponent'
+import { Space } from '../../components/funcionais/SpaceComponent'
 import { Title } from '../../components/funcionais/TitleComponent'
+import { HeaderComponent } from '../../components/HeaderComponent'
 
 export const HomeScreen = () => {
     return (
         <ContainerComponent>
-            <Title>Ola mundo</Title>
+            <Space top={2}>
+                <HeaderComponent />
+            </Space >
         </ContainerComponent>
     )
 }
