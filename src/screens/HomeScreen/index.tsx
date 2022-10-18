@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, View } from 'react-native'
+import { Image, TouchableOpacity, View } from 'react-native'
 import { CardComponent } from '../../components/CardComponent'
 import { CardMusicComponent } from '../../components/CardMusicComponent'
 import { ContainerComponent } from '../../components/funcionais/ContainerComponent'
@@ -23,8 +23,10 @@ import { SimpleLineIcons } from '@expo/vector-icons'
 import { FullCard } from '../../components/funcionais/FullCard'
 import { Text } from '../../components/funcionais/TextComponent'
 import { ArtistComponent } from '../../components/ArtistComponent'
+import { useNavigation } from '@react-navigation/native'
 
 export const HomeScreen = () => {
+    const navigation = useNavigation<any>()
     return (
         <ContainerComponent>
             <Space top={2}>
@@ -40,9 +42,9 @@ export const HomeScreen = () => {
             </Space>
             <Space top={2}>
                 <Row style={{ flexWrap: 'wrap', justifyContent: 'space-around' }}>
-                    <View>
+                    <TouchableOpacity onPress={() => {navigation.navigate('MusicListScreen')}}>
                         <CardMusicComponent title={'Para festa'} photo={party} />
-                    </View>
+                    </TouchableOpacity>
                     <View>
                         <CardMusicComponent title={'Rave'} photo={rave} />
                     </View>
