@@ -24,6 +24,7 @@ import { FullCard } from '../../components/funcionais/FullCard'
 import { Text } from '../../components/funcionais/TextComponent'
 import { ArtistComponent } from '../../components/ArtistComponent'
 import { useNavigation } from '@react-navigation/native'
+import { BigMusicComponent } from '../../components/BigMusicComponent'
 
 export const HomeScreen = () => {
     const [focus, setFocus] = useState<any>('none')
@@ -117,6 +118,12 @@ export const HomeScreen = () => {
                                 <CardComponent focus={focus} setFocus={setFocus} title={focus} />
                             </View>
                         </Row>
+                    </Space>
+                    <Space top={0}>
+                        <BigMusicComponent/>
+                        <BigMusicComponent/>
+                        <BigMusicComponent/>
+                        <BigMusicComponent/>
                     </Space>
                 </>
             )}
