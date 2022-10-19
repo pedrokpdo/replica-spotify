@@ -1,6 +1,6 @@
 import { AntDesign, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { Divider } from "../../components/funcionais/Divider";
 import { FullCard } from "../../components/funcionais/FullCard";
@@ -18,20 +18,22 @@ export const SettingsScreen = () => {
             </Space>
             <Divider top={4} bottom={2} />
             <Space>
-                <Row>
-                    <FullCard style={{ backgroundColor: '#222222', alignItems: 'center', paddingHorizontal: 32, borderRadius: 8, marginRight: 16 }}>
-                        <Ionicons name='cloud-offline' color={'white'} size={24} />
-                        <Title>Offline</Title>
-                    </FullCard>
-                    <FullCard style={{ backgroundColor: '#222222', alignItems: 'center', paddingHorizontal: 32, borderRadius: 8, marginRight: 16 }}>
-                        <Ionicons name='eye-off' color={'white'} size={24} />
-                        <Title>Offline</Title>
-                    </FullCard>
-                    <FullCard style={{ backgroundColor: '#222222', alignItems: 'center', paddingHorizontal: 32, borderRadius: 8, marginRight: 16 }}>
-                        <Ionicons name='git-branch-sharp' color={'white'} size={24} />
-                        <Title>Offline</Title>
-                    </FullCard>
-                </Row>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <Row>
+                        <FullCard style={{ backgroundColor: '#222222', alignItems: 'center', paddingHorizontal: 32, borderRadius: 8, marginRight: 16 }}>
+                            <Ionicons name='cloud-offline' color={'white'} size={24} />
+                            <Title>Offline</Title>
+                        </FullCard>
+                        <FullCard style={{ backgroundColor: '#222222', alignItems: 'center', paddingHorizontal: 32, borderRadius: 8, marginRight: 16 }}>
+                            <Ionicons name='eye-off' color={'white'} size={24} />
+                            <Title>Privado</Title>
+                        </FullCard>
+                        <FullCard style={{ backgroundColor: '#222222', alignItems: 'center', paddingHorizontal: 32, borderRadius: 8, marginRight: 16 }}>
+                            <Ionicons name='git-branch-sharp' color={'white'} size={24} />
+                            <Title>Economia de dados</Title>
+                        </FullCard>
+                    </Row>
+                </ScrollView>
             </Space>
             <Space top={2}>
                 <Title style={{ fontSize: 24 }}>Conta</Title>
