@@ -2,6 +2,7 @@ import { AntDesign, Entypo, Ionicons, MaterialCommunityIcons } from "@expo/vecto
 import React from "react";
 import { View } from "react-native";
 import { CardComponent } from "../../components/CardComponent";
+import { FixComponent } from "../../components/FixComponent";
 import { Button } from "../../components/funcionais/ButtonComponent";
 import { ContainerComponent } from "../../components/funcionais/ContainerComponent";
 import { Divider } from "../../components/funcionais/Divider";
@@ -53,7 +54,7 @@ export const LibaryScreen = () => {
                     <Row style={{ alignItems: 'center', justifyContent: 'space-between' }}>
                         <Row style={{ alignItems: 'center' }}>
                             <MaterialCommunityIcons name="spotify" color={'green'} size={24} />
-                            <Text>Dicas</Text>
+                            <Text style={{ marginLeft: 8 }}>Dicas</Text>
                         </Row>
                         <Entypo name="cross" size={24} color='white' />
                     </Row>
@@ -61,6 +62,27 @@ export const LibaryScreen = () => {
                     <Text top={1} style={{ color: '#dadada' }}>Quando você segue um programa, é mais fácil encontrar os episódios mais recentes</Text>
                     <Button top={3} title="Navegar pelos podcasts" />
                 </FullCard>
+            </Space>
+            <Space top={2}>
+                <FullCard style={{ backgroundColor: '#313030', borderRadius: 4 }}>
+                    <Row style={{ alignItems: 'center', justifyContent: 'space-between' }}>
+                        <Row style={{ alignItems: 'center' }}>
+                            <MaterialCommunityIcons name="spotify" color={'green'} size={24} />
+                            <Text style={{ marginLeft: 8 }}>Atualizar</Text>
+                        </Row>
+                        <Entypo name="cross" size={24} color='white' />
+                    </Row>
+                    <Row top={2} bottom={2} style={{ alignItems: 'center' }}>
+                        <View style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#492c42', padding: 12, }}>
+                            <Ionicons name="notifications" color={'green'} size={32} />
+                        </View>
+                        <Title style={{ width: 250, marginLeft: 16 }}>Um novo lar pros novos episódios</Title>
+                    </Row>
+                </FullCard>
+            </Space>
+            <Space bottom={10}>
+                <FixComponent Icon={AntDesign} colorIcon={'white'} backgroundColor={'purple'} iconName='heart' title={'Músicas curtidas'} />
+                <FixComponent Icon={Ionicons} colorIcon={'green'} backgroundColor={'#492c42'} iconName='notifications' title={'Novos episódios'} />
             </Space>
         </ContainerComponent>
     )
